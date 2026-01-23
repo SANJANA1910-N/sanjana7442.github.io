@@ -1,39 +1,218 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Sanjana Portfolio</title>
-    <style>
-        body { font-family: Arial; }
-        section { margin: 20px; }
-    </style>
+<meta charset="UTF-8">
+<title>Sanjana Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+body{
+    background:#0b0b0b;
+    color:white;
+}
+
+/* NAVBAR */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+}
+header h2{
+    color:#ff3c3c;
+}
+nav a{
+    color:white;
+    margin-left:25px;
+    text-decoration:none;
+}
+nav a:hover{
+    color:#ff3c3c;
+}
+
+/* HERO */
+.hero{
+    height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+}
+.hero h1{
+    font-size:48px;
+}
+.hero span{
+    color:#ff3c3c;
+}
+.hero p{
+    margin-top:10px;
+    opacity:0.8;
+}
+
+/* SECTIONS */
+section{
+    padding:80px 60px;
+}
+.section-title{
+    font-size:36px;
+    margin-bottom:30px;
+}
+
+/* ABOUT */
+.about-container{
+    display:flex;
+    gap:40px;
+    align-items:center;
+}
+.about-container img{
+    width:260px;
+    border-radius:10px;
+}
+.about-container p{
+    line-height:1.6;
+    opacity:0.9;
+}
+
+/* SERVICES */
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+.service-box{
+    background:linear-gradient(135deg,#ff3c3c,#b30000);
+    padding:25px;
+    border-radius:8px;
+}
+.service-box h3{
+    margin-bottom:10px;
+}
+
+/* PROJECTS */
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+.project-box{
+    background:#1a1a1a;
+    padding:20px;
+    border-radius:8px;
+}
+.project-box h3{
+    margin-bottom:10px;
+}
+
+/* CONTACT */
+.contact p{
+    margin-bottom:10px;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#111;
+    opacity:0.7;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .about-container{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+</style>
 </head>
+
 <body>
 
-<h1>N Sanjana</h1>
+<header>
+    <h2>Sanjana Portfolio</h2>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">My Works</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
-<section>
-    <h2>About Me</h2>
-    <p>B.Tech student passionate about software development.</p>
+<!-- HOME -->
+<section class="hero" id="home">
+    <h1>Hi, I'm <span>Sanjana</span></h1>
+    <p>B.Tech CSE Student | Aspiring Software Developer</p>
 </section>
 
-<section>
-    <h2>Skills</h2>
-    <ul>
-        <li>Java</li>
-        <li>Python</li>
-        <li>HTML, CSS, JavaScript</li>
-    </ul>
+<!-- ABOUT -->
+<section id="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-container">
+        <img src="https://via.placeholder.com/260" alt="Profile">
+        <p>
+            Hey there! I’m Sanjana, a dedicated and enthusiastic learner currently
+            pursuing B.Tech in Computer Science. I am passionate about web development,
+            Python programming, and building real-world applications.
+        </p>
+    </div>
 </section>
 
-<section>
-    <h2>Projects</h2>
-    <p>Chatbot using NLP, Password Strength Checker</p>
+<!-- SERVICES -->
+<section id="services">
+    <h2 class="section-title">My Services</h2>
+    <div class="services">
+        <div class="service-box">
+            <h3>Web Development</h3>
+            <p>Creating responsive and user-friendly websites using HTML, CSS & JS.</p>
+        </div>
+        <div class="service-box">
+            <h3>Problem Solving</h3>
+            <p>Helping with programming logic, DSA basics, and coding practice.</p>
+        </div>
+        <div class="service-box">
+            <h3>Python Development</h3>
+            <p>Building simple applications using Python and automation scripts.</p>
+        </div>
+    </div>
 </section>
 
-<section>
-    <h2>Contact</h2>
+<!-- PROJECTS -->
+<section id="projects">
+    <h2 class="section-title">My Main Projects</h2>
+    <div class="projects">
+        <div class="project-box">
+            <h3>Chatbot using NLP</h3>
+            <p>Python-based chatbot using basic NLP concepts.</p>
+        </div>
+        <div class="project-box">
+            <h3>Password Strength Checker</h3>
+            <p>Python tool to check password security.</p>
+        </div>
+        <div class="project-box">
+            <h3>Portfolio Website</h3>
+            <p>Personal portfolio deployed using GitHub Pages.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+    <h2 class="section-title">Contact</h2>
     <p>Email: sanjanasanju7442@gmail.com</p>
+    <p>GitHub: https://github.com/SANJANA1910-N</p>
 </section>
+
+<footer>
+    © 2026 Sanjana | All Rights Reserved
+</footer>
 
 </body>
 </html>
